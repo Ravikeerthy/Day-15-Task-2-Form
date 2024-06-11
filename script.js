@@ -1,5 +1,5 @@
 var mainDiv = document.createElement("div");
-mainDiv.setAttribute("class", "container-fluid  blur-background");
+mainDiv.setAttribute("class", "container  blur-background");
 mainDiv.setAttribute("id", "main");
 
 document.body.append(mainDiv);
@@ -193,14 +193,14 @@ form.append(button);
 
 mainContainer.append(form);
 // mainContainer.append(formGroup);
-document.body.append(mainContainer);
+
 
 var tableName = document.createElement("div");
-tableName.setAttribute("class", "container box-shadow ");
+tableName.setAttribute("class", "container box-shadow");
 tableName.innerHTML = "<h1 style ='text-align:center'>Data Added in Table</h1>";
 
 var tableWrap = document.createElement("div");
-tableWrap.setAttribute("class", "table-responsive")
+tableWrap.setAttribute("class", "table-responsive custom-table")
 
 var table = document.createElement("table");
 table.setAttribute("class", "table table-bordered");
@@ -208,17 +208,17 @@ table.setAttribute("id", "display");
 tableName.append(table);
 
 var thead = document.createElement("thead");
-thead.setAttribute("class", "thead-light");
+thead.setAttribute("class", "thead");
 table.innerHTML = `
 <tr>
-    <th scope="col">First Name</th>
-    <th scope="col">Last Name</th>
-    <th scope="col">Address</th>
-    <th scope="col">Pincode</th>
-    <th scope="col">Gender</th>
-    <th scope="col">Choice of Food</th>
-    <th scope="col">State</th>
-    <th scope="col">Country</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Address</th>
+    <th>Pincode</th>
+    <th>Gender</th>
+    <th>Choice of Food</th>
+    <th>State</th>
+    <th>Country</th>
 
 </tr>
 `;
@@ -229,7 +229,8 @@ table.append(thead);
 table.append(tbody);
 tableWrap.append(table);
 tableName.append(tableWrap);
-document.body.append(tableName);
+mainContainer.append(tableName);
+document.body.append(mainContainer);
 
 // var entry = document.getElementById("entry");
 // entry.addEventListener("click", addData);

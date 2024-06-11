@@ -23,7 +23,7 @@ table {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 70%;
   height: 100%;
   /* background-color: rgba(255, 255, 255, 0.8); */
   backdrop-filter: blur(10px);
@@ -48,4 +48,21 @@ table {
 }
 table{
     overflow: auto;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: transparent;
+}
+.custom-table{
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+  
+}
+.custom-table th,
+.custom-table td {
+    padding: 10px; 
+    border: 1px #dee2e6; 
 }

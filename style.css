@@ -1,0 +1,51 @@
+h1 {
+  margin: 20px;
+}
+
+#submit {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+
+body {
+  background-image: url("https://images.pexels.com/photos/7130473/pexels-photo-7130473.jpeg?auto=compress&cs=tinysrgb&w=800");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* color: white; */
+}
+
+table {
+  border-radius: 10px;
+}
+.blur-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  backdrop-filter: blur(10px);
+  z-index: -1;
+  /* color: black; */
+}
+.box-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px black;
+  margin: 30px;
+
+}
+.transparent-blur {
+  /* background: rgba(0, 0, 0, 0.5); */
+  backdrop-filter: blur(30px);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+table{
+    overflow: auto;
+}

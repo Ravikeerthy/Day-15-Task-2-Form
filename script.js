@@ -8,9 +8,6 @@ var mainContainer = document.createElement("div");
 mainContainer.setAttribute("class", "container");
 // mainContainer.innerHTML = "<h1 style = 'text-align:center'>Form submission</h1>";
 
-// var formGroup = document.createElement("div");
-// formGroup.setAttribute("class", "form-group");
-
 var form = document.createElement("form");
 form.setAttribute("id", "form");
 form.setAttribute("class", "transparent-blur box-shadow");
@@ -28,6 +25,9 @@ des.setAttribute("class", "text-center");
 des.innerHTML = "This is My Form Submission Task Using DOM";
 form.append(des);
 
+var formGroup = document.createElement("div");
+formGroup.setAttribute("class", "form-group");
+
 var fName = document.createElement("label");
 fName.setAttribute("class", "form-label");
 fName.setAttribute("for", "firstname");
@@ -42,8 +42,13 @@ fNameInput.setAttribute("required", true);
 fNameInput.setAttribute("placeholder", "Enter your name");
 form.append(fNameInput);
 
+form.appendChild(formGroup);
+
 // var br = document.createElement("br");
 // mainContainer.append(br);
+
+var formGroup = document.createElement("div");
+formGroup.setAttribute("class", "form-group");
 
 var lName = document.createElement("label");
 lName.setAttribute("class", "form-label");
@@ -59,8 +64,13 @@ lNameInput.setAttribute("required", true);
 lNameInput.setAttribute("placeholder", "Enter your last name");
 form.append(lNameInput);
 
+form.appendChild(formGroup);
+
 // var br = document.createElement("br");
 // mainContainer.append(br);
+
+var formGroup = document.createElement("div");
+formGroup.setAttribute("class", "form-group");
 
 var address = document.createElement("label");
 address.setAttribute("class", "form-label");
@@ -77,6 +87,10 @@ addInput.setAttribute("placeholder", "Enter the address");
 
 // addInput.innerHTML = `<textarea id="exampleFormControlTextarea1" rows="3"></textarea>`
 form.append(addInput);
+form.appendChild(formGroup);
+
+var formGroup = document.createElement("div");
+formGroup.setAttribute("class", "form-group");
 
 var pincode = document.createElement("label");
 pincode.setAttribute("class", "form-label");
@@ -91,6 +105,11 @@ pincodeInput.setAttribute("type", "text");
 pincodeInput.setAttribute("required", true);
 pincodeInput.setAttribute("placeholder", "Enter your pincode");
 form.append(pincodeInput);
+
+form.appendChild(formGroup);
+
+var formGroup = document.createElement("div");
+formGroup.setAttribute("class", "form-group");
 
 var gender = document.createElement("label");
 gender.setAttribute("class", "form-label");
@@ -113,6 +132,11 @@ genderInput.innerHTML = `<div class="form-check">
 </div>`;
 genderInput.setAttribute("required", true);
 form.append(genderInput);
+
+form.appendChild(formGroup);
+
+var formGroup = document.createElement("div");
+formGroup.setAttribute("class", "form-group");
 
 var foodChoice = document.createElement("label");
 foodChoice.setAttribute("class", "form-label");
@@ -153,6 +177,11 @@ Chinese
 </div>`;
 form.append(foodInput);
 
+form.appendChild(formGroup);
+
+var formGroup = document.createElement("div");
+formGroup.setAttribute("class", "form-group");
+
 var state = document.createElement("label");
 state.setAttribute("class", "form-label");
 state.innerHTML = "<h3>Enter your State </h3>";
@@ -165,6 +194,11 @@ stateInput.setAttribute("type", "text");
 stateInput.setAttribute("required", true);
 stateInput.setAttribute("placeholder", "Enter your state");
 form.append(stateInput);
+
+form.appendChild(formGroup);
+
+var formGroup = document.createElement("div");
+formGroup.setAttribute("class", "form-group");
 
 var Country = document.createElement("label");
 Country.setAttribute("class", "form-label");
@@ -180,6 +214,11 @@ countryInput.setAttribute("required", true);
 countryInput.setAttribute("placeholder", "Enter your country name");
 form.append(countryInput);
 
+form.appendChild(formGroup);
+
+var formGroup = document.createElement("div");
+formGroup.setAttribute("class", "form-group");
+
 var button = document.createElement("button");
 button.setAttribute("class", "btn btn-primary");
 button.setAttribute("id", "submit");
@@ -191,16 +230,17 @@ button.addEventListener("click", function (event) {
 button.innerText = "Submit";
 form.append(button);
 
+form.appendChild(formGroup);
+
 mainContainer.append(form);
 // mainContainer.append(formGroup);
-
 
 var tableName = document.createElement("div");
 tableName.setAttribute("class", "container box-shadow");
 tableName.innerHTML = "<h1 style ='text-align:center'>Data Added in Table</h1>";
 
 var tableWrap = document.createElement("div");
-tableWrap.setAttribute("class", "table-responsive custom-table")
+tableWrap.setAttribute("class", "table-responsive custom-table");
 
 var table = document.createElement("table");
 table.setAttribute("class", "table table-bordered");
@@ -238,9 +278,9 @@ document.body.append(mainContainer);
 var row = 1;
 
 function addData() {
-  var name1 = document.getElementById("first-name").value;
-  var name2 = document.getElementById("last-name").value;
-  var contactadd = document.getElementById("address").value;
+  var firstName = document.getElementById("first-name").value;
+  var lastName = document.getElementById("last-name").value;
+  var textarea = document.getElementById("address").value;
   var pinnumber = document.getElementById("pincode").value;
   var genders = document.querySelector('input[name="gender"]:checked').value;
   var food = Array.from(
@@ -274,9 +314,9 @@ function addData() {
   var cell7 = newRow.insertCell(6);
   var cell8 = newRow.insertCell(7);
 
-  cell1.innerHTML = name1;
-  cell2.innerHTML = name2;
-  cell3.innerHTML = contactadd;
+  cell1.innerHTML = firstName;
+  cell2.innerHTML = lastName;
+  cell3.innerHTML = textarea;
   cell4.innerHTML = pinnumber;
   cell5.innerHTML = genders;
   cell6.innerHTML = food;

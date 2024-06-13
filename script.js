@@ -32,7 +32,7 @@ var fName = document.createElement("label");
 fName.setAttribute("class", "form-label");
 fName.setAttribute("for", "firstname");
 fName.innerHTML = "<h3>Enter your First Name</h3>";
-form.append(fName);
+formGroup.append(fName);
 
 var fNameInput = document.createElement("input");
 fNameInput.setAttribute("class", "form-control");
@@ -40,7 +40,7 @@ fNameInput.setAttribute("id", "first-name");
 fNameInput.setAttribute("type", "text");
 fNameInput.setAttribute("required", true);
 fNameInput.setAttribute("placeholder", "Enter your name");
-form.append(fNameInput);
+formGroup.append(fNameInput);
 
 form.appendChild(formGroup);
 
@@ -54,7 +54,7 @@ var lName = document.createElement("label");
 lName.setAttribute("class", "form-label");
 lName.setAttribute("for", "lastname");
 lName.innerHTML = "<h3>Enter your Last Name</h3>";
-form.append(lName);
+formGroup.append(lName);
 
 var lNameInput = document.createElement("input");
 lNameInput.setAttribute("class", "form-control");
@@ -62,7 +62,7 @@ lNameInput.setAttribute("type", "text");
 lNameInput.setAttribute("id", "last-name");
 lNameInput.setAttribute("required", true);
 lNameInput.setAttribute("placeholder", "Enter your last name");
-form.append(lNameInput);
+formGroup.append(lNameInput);
 
 form.appendChild(formGroup);
 
@@ -76,7 +76,7 @@ var address = document.createElement("label");
 address.setAttribute("class", "form-label");
 address.setAttribute("for", "address");
 address.innerHTML = "<h3>Enter your Address </h3>";
-form.append(address);
+formGroup.append(address);
 
 var addInput = document.createElement("textarea");
 addInput.setAttribute("class", "form-control");
@@ -86,7 +86,7 @@ addInput.setAttribute("type", "text");
 addInput.setAttribute("placeholder", "Enter the address");
 
 // addInput.innerHTML = `<textarea id="exampleFormControlTextarea1" rows="3"></textarea>`
-form.append(addInput);
+formGroup.append(addInput);
 form.appendChild(formGroup);
 
 var formGroup = document.createElement("div");
@@ -96,7 +96,7 @@ var pincode = document.createElement("label");
 pincode.setAttribute("class", "form-label");
 pincode.setAttribute("for", "pincode");
 pincode.innerHTML = "<h3>Enter your Pincode </h3>";
-form.append(pincode);
+formGroup.append(pincode);
 
 var pincodeInput = document.createElement("input");
 pincodeInput.setAttribute("class", "form-control");
@@ -104,7 +104,7 @@ pincodeInput.setAttribute("id", "pincode");
 pincodeInput.setAttribute("type", "text");
 pincodeInput.setAttribute("required", true);
 pincodeInput.setAttribute("placeholder", "Enter your pincode");
-form.append(pincodeInput);
+formGroup.append(pincodeInput);
 
 form.appendChild(formGroup);
 
@@ -114,7 +114,7 @@ formGroup.setAttribute("class", "form-group");
 var gender = document.createElement("label");
 gender.setAttribute("class", "form-label");
 gender.innerHTML = "<h3>Select your Gender</h3>";
-form.append(gender);
+formGroup.append(gender);
 
 var genderInput = document.createElement("div");
 genderInput.setAttribute("name", "gender");
@@ -131,7 +131,7 @@ genderInput.innerHTML = `<div class="form-check">
 </label>
 </div>`;
 genderInput.setAttribute("required", true);
-form.append(genderInput);
+formGroup.append(genderInput);
 
 form.appendChild(formGroup);
 
@@ -141,7 +141,7 @@ formGroup.setAttribute("class", "form-group");
 var foodChoice = document.createElement("label");
 foodChoice.setAttribute("class", "form-label");
 foodChoice.innerHTML = "<h3>Select your Food choice </h3>";
-form.append(foodChoice);
+formGroup.append(foodChoice);
 
 var foodInput = document.createElement("div");
 foodInput.setAttribute("id", "choosefood");
@@ -175,7 +175,7 @@ Chinese
   Arabian
 </label>
 </div>`;
-form.append(foodInput);
+formGroup.append(foodInput);
 
 form.appendChild(formGroup);
 
@@ -185,7 +185,7 @@ formGroup.setAttribute("class", "form-group");
 var state = document.createElement("label");
 state.setAttribute("class", "form-label");
 state.innerHTML = "<h3>Enter your State </h3>";
-form.append(state);
+formGroup.append(state);
 
 var stateInput = document.createElement("input");
 stateInput.setAttribute("class", "form-control");
@@ -193,7 +193,7 @@ stateInput.setAttribute("id", "state");
 stateInput.setAttribute("type", "text");
 stateInput.setAttribute("required", true);
 stateInput.setAttribute("placeholder", "Enter your state");
-form.append(stateInput);
+formGroup.append(stateInput);
 
 form.appendChild(formGroup);
 
@@ -204,7 +204,7 @@ var Country = document.createElement("label");
 Country.setAttribute("class", "form-label");
 Country.setAttribute("id", "country");
 Country.innerHTML = "<h3>Enter your Country</h3>";
-form.append(Country);
+formGroup.append(Country);
 
 var countryInput = document.createElement("input");
 countryInput.setAttribute("class", "form-control");
@@ -212,7 +212,7 @@ countryInput.setAttribute("id", "countryname");
 countryInput.setAttribute("type", "text");
 countryInput.setAttribute("required", true);
 countryInput.setAttribute("placeholder", "Enter your country name");
-form.append(countryInput);
+formGroup.append(countryInput);
 
 form.appendChild(formGroup);
 
@@ -228,7 +228,7 @@ button.addEventListener("click", function (event) {
   addData();
 });
 button.innerText = "Submit";
-form.append(button);
+formGroup.append(button);
 
 form.appendChild(formGroup);
 
@@ -238,19 +238,20 @@ mainContainer.append(form);
 var tableName = document.createElement("div");
 tableName.setAttribute("class", "container box-shadow");
 tableName.innerHTML = "<h1 style ='text-align:center'>Data Added in Table</h1>";
+mainContainer.append(tableName);
 
 var tableWrap = document.createElement("div");
 tableWrap.setAttribute("class", "table-responsive custom-table");
 
 var table = document.createElement("table");
-table.setAttribute("class", "table table-bordered");
+table.setAttribute("class", "table");
 table.setAttribute("id", "display");
-tableName.append(table);
+// tableName.append(table);
 
 var thead = document.createElement("thead");
-thead.setAttribute("class", "thead");
+// thead.setAttribute("class", "thead");
 table.innerHTML = `
-<tr>
+<thead>
     <th>First Name</th>
     <th>Last Name</th>
     <th>Address</th>
@@ -260,16 +261,14 @@ table.innerHTML = `
     <th>State</th>
     <th>Country</th>
 
-</tr>
+</thead>
 `;
-// tableName.append(thead);
-
 var tbody = document.createElement("tbody");
-table.append(thead);
+// table.append(thead);
 table.append(tbody);
 tableWrap.append(table);
 tableName.append(tableWrap);
-mainContainer.append(tableName);
+// mainContainer.append(tableName);
 document.body.append(mainContainer);
 
 // var entry = document.getElementById("entry");
